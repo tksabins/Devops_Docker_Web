@@ -2,7 +2,7 @@ FROM tksabins/ubuntu
 RUN apt-get update
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
 RUN apt-get -y install apache2
-RUN apt-get -y install unzip
+RUN apt-get install unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip photogenic.zip
@@ -17,6 +17,7 @@ ENV name ProjectDemo
 # RUN apt-get update
 # RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
 # RUN apt-get -y install apache2
+# RUN apt-get install unzip
 # ADD https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip /var/www/html/
 # WORKDIR /var/www/html/
 # RUN unzip shine.zip
